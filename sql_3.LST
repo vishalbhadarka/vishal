@@ -1,25 +1,23 @@
-select e.emp_name,e.salary,s.grade from empl e join salgrade s on e.salary between s.losal
+ #2=select e.emp_name,e.salary,s.grade from empl e join salgrade s on e.salary between s.losal
   2  and s.hisal;
 
 EMP_NAME       SALARY      GRADE                                                
 ---------- ---------- ----------                                                
 aasha            6767          5                                                
-
-SQL> 
-SQL> create table  salgrade
-  2  
-SQL> create table  salgrade(grade number(3),losal number(5),hisal number(5));
-create table  salgrade(grade number(3),losal number(5),hisal number(5))
-              *
-ERROR at line 1:
-ORA-00955: name is already used by an existing object 
+ 
+  
+SQL>#1= create table  salgrade(grade number(3),losal number(5),hisal number(5));
 
 
-SQL> desc salgrade;
- Name                                      Null?    Type
- ----------------------------------------- -------- ----------------------------
- GRADE                                              NUMBER
- LOSAL                                              NUMBER
- HISAL                                              NUMBER
 
+
+SQL> select * from salgrade;
+
+     GRADE      LOSAL      HISAL
+---------- ---------- ----------
+         1        700       1200
+         2       1201       1400
+         3       1401       2000
+         4       2001       3000
+         5       3001       9999
 SQL> 
