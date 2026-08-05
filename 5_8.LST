@@ -1,21 +1,4 @@
-desc dep;
- Name                                      Null?    Type
- ----------------------------------------- -------- ----------------------------
- DEP_NO                                             NUMBER(4)
- DEP_NAME                                           VARCHAR2(6)
- LOCATION                                           VARCHAR2(7)
 
-SQL> desc empl;
- Name                                      Null?    Type
- ----------------------------------------- -------- ----------------------------
- EMP_ID                                             NUMBER(6)
- EMP_NAME                                           VARCHAR2(10)
- POST                                               VARCHAR2(9)
- MGR_ID                                             NUMBER(6)
- HIRE_DATE                                          DATE
- SALARY                                             NUMBER(10)
- CMMISSION                                          NUMBER(7)
- DEPT_ID                                            NUMBER(3)
 
 SQL>  select e.emp_id,e.emp_name,d.dep_no,d.dep_name from empl e inner join dep d on e.dept_id=d.dep_no;
 
@@ -35,7 +18,7 @@ SQL>  select e.emp_id,e.emp_name,d.dep_no,d.dep_name from empl e inner join dep 
 
 11 rows selected.
 
-SQL> select e.emp_name,d.dep_no,d.dep_name from empl e left outer join dep d on e.emp
+
   2  
 SQL> select e.emp_name,d.dep_no,d.dep_name from empl e left outer join dep d on e.dept_id=d.dep_no;
 
@@ -99,99 +82,6 @@ EMP_NAME       DEP_NO DEP_NA
 
 12 rows selected.
 
-SQL> select * from tab;
 
-TNAME                          TABTYPE  CLUSTERID                               
------------------------------- ------- ----------                               
-DEPT                           TABLE                                            
-EMP                            TABLE                                            
-SALGRADE                       TABLE                                            
-FEE_MASTER                     TABLE                                            
-EMPLOYEES                      TABLE                                            
-BIN$q3seW9iGSZCNapw2MyA9rw==$0 TABLE                                            
-STD2                           TABLE                                            
-PRODUCTION                     TABLE                                            
-DEPART                         TABLE                                            
-EMPLOYE                        TABLE                                            
-COURSE_MASTER                  TABLE                                            
 
-TNAME                          TABTYPE  CLUSTERID                               
------------------------------- ------- ----------                               
-STUDENT_MASTER                 TABLE                                            
-STD4                           TABLE                                            
-DEPARTMENT                     TABLE                                            
-EMPLOYEE                       TABLE                                            
-DEPARTMENTT                    TABLE                                            
-EMPLOYEEE                      TABLE                                            
-STUDENTS                       TABLE                                            
-BIN$bASXBkIfRh2mJlAixcoCOQ==$0 TABLE                                            
-EMPL                           TABLE                                            
-DEP                            TABLE                                            
-STD1                           TABLE                                            
 
-TNAME                          TABTYPE  CLUSTERID                               
------------------------------- ------- ----------                               
-BIN$Wd1oK4d8Q9O+iVJDRfQT+Q==$0 TABLE                                            
-STD                            TABLE                                            
-STD3                           TABLE                                            
-
-25 rows selected.
-
-SQL> select * from empl;
-
-    EMP_ID EMP_NAME   POST          MGR_ID HIRE_DATE     SALARY  CMMISSION      
----------- ---------- --------- ---------- --------- ---------- ----------      
-   DEPT_ID                                                                      
-----------                                                                      
-         5 aasha      clerk             23 06-NOV-90       6767        878      
-        30                                                                      
-                                                                                
-     13254 radha      salesman       12345 25-NOV-90      12000       4000      
-        20                                                                      
-                                                                                
-     12675 tanmay     president            05-JUL-85     124000                 
-        10                                                                      
-                                                                                
-
-    EMP_ID EMP_NAME   POST          MGR_ID HIRE_DATE     SALARY  CMMISSION      
----------- ---------- --------- ---------- --------- ---------- ----------      
-   DEPT_ID                                                                      
-----------                                                                      
-     12675 suraj      salesman       12345 12-AUG-92      14650       1700      
-        30                                                                      
-                                                                                
-     14567 seema      programer      13654 17-JUL-94      35000                 
-        10                                                                      
-                                                                                
-     16754 krupa      programer      13654 13-AUG-94      30000                 
-        10                                                                      
-                                                                                
-
-    EMP_ID EMP_NAME   POST          MGR_ID HIRE_DATE     SALARY  CMMISSION      
----------- ---------- --------- ---------- --------- ---------- ----------      
-   DEPT_ID                                                                      
-----------                                                                      
-     14562 kalpana    clerk                17-SEP-90      17000                 
-        40                                                                      
-                                                                                
-     12435 keval      salesman       12345 20-OCT-90      18000       6500      
-        20                                                                      
-                                                                                
-     13654 parth      analyst        12675 27-DEC-95      90000                 
-        10                                                                      
-                                                                                
-
-    EMP_ID EMP_NAME   POST          MGR_ID HIRE_DATE     SALARY  CMMISSION      
----------- ---------- --------- ---------- --------- ---------- ----------      
-   DEPT_ID                                                                      
-----------                                                                      
-     18654 ramesh     analyst        12675 15-MAY-93      85000                 
-        10                                                                      
-                                                                                
-     12345 vishal     clerk                18-NOV-90      15000                 
-        10                                                                      
-                                                                                
-
-11 rows selected.
-
-SQL> 
