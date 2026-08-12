@@ -29,26 +29,6 @@ C
 -                                                                               
 A                                                                               
 
-SQL> SELECT CHR(a) from dual;
-SELECT CHR(a) from dual
-           *
-ERROR at line 1:
-ORA-00904: "A": invalid identifier 
-
-
-SQL> select chr('a') from dual;
-select chr('a') from dual
-           *
-ERROR at line 1:
-ORA-01722: invalid number 
-
-
-SQL> select int('a') from dual;
-select int('a') from dual
-       *
-ERROR at line 1:
-ORA-00904: "INT": invalid identifier 
-
 
 SQL> SELECT ASCII('A') FROM dual;
 
